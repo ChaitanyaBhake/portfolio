@@ -1,0 +1,116 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Heading Text CSS */
+.text {
+    background: linear-gradient(
+        to right,
+        #2e86de,
+        #4cd137
+    ); 
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Double Quote Reversed  */
+.doubleQuotes {
+    rotate: 180deg;
+}
+
+/* DP Image CSS */
+.dpimage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* DP Image Glowing Animation and CSS ===================================================================== */
+.dpimage {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 10px rgba(0, 255, 255, 0.5),
+        /* Cyan */ 0 0 20px 10px rgba(5, 151, 0, 0.5); /* Green */
+    animation: glow-animation 2s infinite alternate;
+}
+
+@keyframes glow-animation {
+    0% {
+        box-shadow: 0 0 20px 10px rgba(190, 190, 190, 0.5),
+            0 0 20px 10px rgba(14, 219, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 30px 20px rgba(237, 250, 250, 0.8),
+            0 0 30px 20px rgba(3, 228, 198, 0.8);
+    }
+}
+/* DP Image Glowing Animation and CSS Ends===================================================================== */
+
+
+/* Tilting Animation and CSS =============================================================================== */ 
+.tilt-effect {
+    transition: transform 0.3s ease-in-out;
+}
+
+.tilt-effect:hover {
+    transform: perspective(1000px) rotateY(10deg);
+}
+
+.tilt-effect:hover:nth-child(even) {
+    transform: perspective(1000px) rotateY(-10deg);
+}
+
+.project-card.tilt-effect {
+    transition: transform 0.3s ease-in-out;
+}
+
+@keyframes tilt-animation {
+    0% {
+        transform: rotate(-2deg);
+    }
+    100% {
+        transform: rotate(2deg);
+    }
+}
+/* Tilting Animation and CSS Ends =============================================================================== */ 
+
+
+
+/*Project Cards Glowing Animation and CSS ============================================================================== */
+.glow-effect {
+    animation: glow 4.5s infinite alternate; 
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 20px 10px rgba(0, 0, 255, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 10px 5px rgba(204, 0, 255, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 20px 10px rgba(0, 0, 255, 0.7);
+
+    }
+}
+
+/*Project Cards Glowing Animation and CSS Ends ============================================================================== */
+
+
+@media screen and (min-width: 1200px) {
+    .projectsDiv {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
