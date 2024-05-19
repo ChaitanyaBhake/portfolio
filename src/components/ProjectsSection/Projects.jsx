@@ -328,10 +328,21 @@ const Projects = () => {
                             GSAP Animations
                         </p>
                         <div className="flex gap-2 lg:mt-14 mt-12">
-                            <button className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700" onClick={()=> scrollTo(0,0)}>
+                            <button
+                                className="flex-1 text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700"
+                                onClick={() => scrollTo(0, 0)}
+                            >
                                 Live preview
                             </button>
-                            <button className="flex-1 text-sm py-3 border rounded-full hover:border-blue-500 hover:text-blue-500">
+                            <button
+                                className="flex-1 text-sm py-3 border rounded-full hover:border-blue-500 hover:text-blue-500"
+                                onClick={() =>
+                                    window.open(
+                                        'https://github.com/ChaitanyaBhake/portfolio',
+                                        '_blank'
+                                    )
+                                }
+                            >
                                 Checkout github
                             </button>
                         </div>
